@@ -1,4 +1,4 @@
-package com.jerolba.xbuffers;
+package com.jerolba.parquet.avro;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,8 +20,9 @@ import org.apache.parquet.hadoop.ParquetWriter;
 import org.apache.parquet.hadoop.util.HadoopOutputFile;
 import org.apache.parquet.io.OutputFile;
 
-import com.jerolba.xbuffers.SampleDataFactory.Org;
-import com.jerolba.xbuffers.SampleDataFactory.Type;
+import com.jerolba.parquet.SampleDataFactory;
+import com.jerolba.parquet.SampleDataFactory.Org;
+import com.jerolba.parquet.SampleDataFactory.Type;
 
 public class ToParquetUsingAvroWithGenericRecordByPosition {
 

@@ -1,4 +1,4 @@
-package com.jerolba.xbuffers;
+package com.jerolba.parquet.avro;
 
 import java.io.IOException;
 import java.util.ArrayList;

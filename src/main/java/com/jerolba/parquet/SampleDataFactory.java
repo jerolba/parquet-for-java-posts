@@ -1,4 +1,4 @@
-package com.jerolba.xbuffers;
+package com.jerolba.parquet;
 
 import java.util.ArrayList;
 import java.util.List;

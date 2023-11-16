@@ -1,4 +1,4 @@
-package com.jerolba.xbuffers;
+package com.jerolba.parquet.avro;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ import org.apache.parquet.hadoop.ParquetReader;
 import org.apache.parquet.hadoop.util.HadoopInputFile;
 import org.apache.parquet.io.InputFile;
 
-import com.jerolba.xbuffers.SampleDataFactory.Org;
+import com.jerolba.parquet.SampleDataFactory.Org;
 
 public class FromParquetUsingAvroWithGenericRecordProjection {
 

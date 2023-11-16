@@ -1,4 +1,4 @@
-package com.jerolba.xbuffers;
+package com.jerolba.parquet.avro;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,7 +12,8 @@ import org.apache.parquet.hadoop.ParquetWriter;
 import org.apache.parquet.hadoop.util.HadoopOutputFile;
 import org.apache.parquet.io.OutputFile;
 
-import com.jerolba.xbuffers.SampleDataFactory.Org;
+import com.jerolba.parquet.SampleDataFactory;
+import com.jerolba.parquet.SampleDataFactory.Org;
 import com.jerolba.xbuffers.avro.Attribute;
 import com.jerolba.xbuffers.avro.Organization;
 import com.jerolba.xbuffers.avro.OrganizationType;
