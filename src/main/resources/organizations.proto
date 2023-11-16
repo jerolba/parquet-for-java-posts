@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package com.jerolba.xbuffers.protocol;
+
+option java_multiple_files = true;
+option java_package = "com.jerolba.xbuffers.protocol";
+option java_outer_classname = "OrganizationsCollection";
+
+message Organization {
+  string name = 1;
+  string category = 2;
+  OrganizationType type = 3;
+  string country = 4;
+  repeated Attribute attributes = 5;
+
+  enum OrganizationType {
+    FOO = 0;
+    BAR = 1;
+    BAZ = 2;
+  }
+
+  message Attribute {
+    string id = 1;
+	int32 quantity = 2;
+	int32 amount = 3;
+	int32 size = 4;
+	double percent = 5;
+	bool active = 6;
+  }
+
+}
+
+message Organizations {
+  repeated Organization organizations = 1;
+}

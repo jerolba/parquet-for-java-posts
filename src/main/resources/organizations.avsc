@@ -1,0 +1,67 @@
+{
+  "type": "record",
+  "name": "Organization",
+  "namespace": "com.jerolba.xbuffers.avro",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "category",
+      "type": "string"
+    },
+    {
+      "name": "organizationType",
+      "type": {
+        "type": "enum",
+        "name": "OrganizationType",
+        "symbols": [
+          "FOO",
+          "BAR",
+          "BAZ"
+        ]
+      }
+    },
+    {
+      "name": "country",
+      "type": "string"
+    },
+    {
+      "name": "attributes",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "Attribute",
+          "fields": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "quantity",
+              "type": "int"
+            },
+            {
+              "name": "amount",
+              "type": "int"
+            },
+            {
+              "name": "size",
+              "type": "int"
+            },
+            {
+              "name": "percent",
+              "type": "double"
+            },
+            {
+              "name": "active",
+              "type": "boolean"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
