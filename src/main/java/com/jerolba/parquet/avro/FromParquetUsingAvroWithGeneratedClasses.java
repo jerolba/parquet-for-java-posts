@@ -16,7 +16,7 @@ import com.jerolba.xbuffers.avro.Organization;
 public class FromParquetUsingAvroWithGeneratedClasses {
 
     public static void main(String[] args) throws IOException {
-        Path path = new Path("/tmp/organizations.parquet");
+        Path path = new Path("/tmp/organizations_avro.parquet");
         InputFile inputFile = HadoopInputFile.fromPath(path, new Configuration());
         try (ParquetReader<Organization> reader = AvroParquetReader.<Organization>builder(inputFile).build()) {
             List<Organization> organizations = new ArrayList<>();

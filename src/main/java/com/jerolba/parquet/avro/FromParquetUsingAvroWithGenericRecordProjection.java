@@ -28,7 +28,7 @@ public class FromParquetUsingAvroWithGenericRecordProjection {
                 .requiredString("country")
                 .endRecord();
 
-        Path path = new Path("/tmp/organizations.parquet");
+        Path path = new Path("/tmp/organizations_avro.parquet");
         InputFile inputFile = HadoopInputFile.fromPath(path, new Configuration());
         Configuration configuration = new Configuration();
         configuration.set(AvroReadSupport.AVRO_REQUESTED_PROJECTION, orgsSchema.toString());

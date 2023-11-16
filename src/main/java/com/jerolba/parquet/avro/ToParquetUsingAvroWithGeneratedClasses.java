@@ -23,7 +23,7 @@ public class ToParquetUsingAvroWithGeneratedClasses {
     public static void main(String[] args) throws IOException {
         List<Org> organizations = new SampleDataFactory().getOrganizations(400_000);
 
-        Path path = new Path("/tmp/organizations.parquet");
+        Path path = new Path("/tmp/organizations_avro.parquet");
         OutputFile outputFile = HadoopOutputFile.fromPath(path, new Configuration());
         try (ParquetWriter<Organization> writer = AvroParquetWriter.<Organization>builder(outputFile)
                 .withSchema(new Organization().getSchema())

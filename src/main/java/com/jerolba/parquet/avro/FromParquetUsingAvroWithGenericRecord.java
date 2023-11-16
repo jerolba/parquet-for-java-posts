@@ -13,7 +13,6 @@ import org.apache.parquet.hadoop.ParquetReader;
 import org.apache.parquet.hadoop.util.HadoopInputFile;
 import org.apache.parquet.io.InputFile;
 
-import com.jerolba.parquet.SampleDataFactory;
 import com.jerolba.parquet.SampleDataFactory.Attr;
 import com.jerolba.parquet.SampleDataFactory.Org;
 import com.jerolba.parquet.SampleDataFactory.Type;
@@ -21,7 +20,7 @@ import com.jerolba.parquet.SampleDataFactory.Type;
 public class FromParquetUsingAvroWithGenericRecord {
 
     public static void main(String[] args) throws IOException {
-        Path path = new Path("/tmp/organizations.parquet");
+        Path path = new Path("/tmp/organizations_avro.parquet");
         InputFile inputFile = HadoopInputFile.fromPath(path, new Configuration());
         try (ParquetReader<GenericRecord> reader = AvroParquetReader.<GenericRecord>builder(inputFile).build()) {
             List<Org> organizations = new ArrayList<>();

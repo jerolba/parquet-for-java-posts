@@ -65,7 +65,7 @@ public class ToParquetUsingAvroWithGenericRecordByPosition {
         int organizationTypePos = orgsSchema.getField("organizationType").pos();
         int attributesPos = orgsSchema.getField("attributes").pos();
 
-        Path path = new Path("/tmp/organizations.parquet");
+        Path path = new Path("/tmp/organizations_avro.parquet");
         OutputFile outputFile = HadoopOutputFile.fromPath(path, new Configuration());
         try (ParquetWriter<GenericRecord> writer = AvroParquetWriter.<GenericRecord>builder(outputFile)
                 .withSchema(orgsSchema)

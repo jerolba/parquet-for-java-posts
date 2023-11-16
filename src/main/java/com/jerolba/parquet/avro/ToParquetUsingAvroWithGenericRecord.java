@@ -54,7 +54,7 @@ public class ToParquetUsingAvroWithGenericRecord {
         enums.put(Type.BAZ, new EnumSymbol(typeField, Type.BAZ));
         enums.put(Type.FOO, new EnumSymbol(typeField, Type.FOO));
 
-        Path path = new Path("/tmp/organizations.parquet");
+        Path path = new Path("/tmp/organizations_avro.parquet");
         OutputFile outputFile = HadoopOutputFile.fromPath(path, new Configuration());
         try (ParquetWriter<GenericRecord> writer = AvroParquetWriter.<GenericRecord>builder(outputFile)
                 .withSchema(orgsSchema)
