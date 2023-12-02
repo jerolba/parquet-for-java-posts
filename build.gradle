@@ -13,6 +13,8 @@ repositories {
 }
 
 dependencies {
+	implementation 'com.google.protobuf:protobuf-java:3.16.0'
+	implementation 'org.apache.avro:avro:1.11.1'
 	implementation 'com.github.javafaker:javafaker:1.0.2'
 	implementation 'com.google.guava:guava:30.1.1-jre'
     implementation('org.apache.parquet:parquet-hadoop:1.13.0') {
@@ -71,6 +73,8 @@ dependencies {
         exclude group: 'dnsjava', module: 'dnsjava'
         exclude group: 'log4j', module: 'log4j'
     }
+
+    implementation 'org.apache.parquet:parquet-protobuf:1.12.3'
 
 	implementation 'org.apache.logging.log4j:log4j-core:2.17.2'
 	implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.17.2'
